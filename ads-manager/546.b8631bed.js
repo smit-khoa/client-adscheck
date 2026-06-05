@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkads_manager=self.webpackChunkads_manager||[]).push([["546"],{4833(e,a,r){var t=r(7758),n=r(4444);let s=r(8165).A;var u=r(3024);let c=document.getElementById("root");if(c){let e=(0,t.createApp)({render:()=>(0,t.h)(u.SpriteProvider,()=>(0,t.h)(s))});e.use((0,n.createPinia)()),e.mount(c)}}}]);
+//# sourceMappingURL=546.b8631bed.js.map

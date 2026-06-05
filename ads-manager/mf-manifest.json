@@ -34,15 +34,17 @@
       "assets": {
         "js": {
           "async": [
-            "166.9f21d5d9.js"
+            "166.8eb3d13c.js"
           ],
           "sync": [
-            "737.149ebd5c.js"
+            "465.7cce2419.js"
           ]
         },
         "css": {
           "async": [],
-          "sync": []
+          "sync": [
+            "465.ea72a128.css"
+          ]
         }
       }
     },
@@ -55,10 +57,10 @@
       "assets": {
         "js": {
           "async": [
-            "166.9f21d5d9.js"
+            "166.8eb3d13c.js"
           ],
           "sync": [
-            "680.3c94f25c.js"
+            "680.ceeded75.js"
           ]
         },
         "css": {
@@ -77,7 +79,7 @@
         "js": {
           "async": [],
           "sync": [
-            "166.9f21d5d9.js"
+            "166.8eb3d13c.js"
           ]
         },
         "css": {
@@ -95,20 +97,19 @@
       "assets": {
         "js": {
           "sync": [
-            "__federation_expose_App.aaac4342.js"
+            "302.c1cb5cb5.js",
+            "__federation_expose_App.d51d1bd3.js"
           ],
           "async": [
-            "166.9f21d5d9.js",
-            "27.41c137cc.js",
-            "737.149ebd5c.js"
+            "166.8eb3d13c.js",
+            "974.d8cc6344.js",
+            "465.7cce2419.js"
           ]
         },
         "css": {
-          "sync": [
-            "__federation_expose_App.452ad364.css"
-          ],
+          "sync": [],
           "async": [
-            "428.39f10746.css"
+            "465.ea72a128.css"
           ]
         }
       },
@@ -120,22 +121,22 @@
       "assets": {
         "js": {
           "sync": [
-            "__federation_expose_routes.d114b80e.js"
+            "__federation_expose_routes.14002157.js"
           ],
           "async": [
-            "__federation_expose_App.aaac4342.js",
-            "15.738164a6.js",
-            "166.9f21d5d9.js",
-            "27.41c137cc.js",
-            "737.149ebd5c.js"
+            "302.c1cb5cb5.js",
+            "__federation_expose_App.d51d1bd3.js",
+            "220.57328a30.js",
+            "166.8eb3d13c.js",
+            "974.d8cc6344.js",
+            "465.7cce2419.js"
           ]
         },
         "css": {
           "sync": [],
           "async": [
-            "__federation_expose_App.452ad364.css",
-            "15.e252db00.css",
-            "428.39f10746.css"
+            "220.fc2fa692.css",
+            "465.ea72a128.css"
           ]
         }
       },
