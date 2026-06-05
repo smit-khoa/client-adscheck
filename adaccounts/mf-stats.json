@@ -1,0 +1,161 @@
+{
+  "id": "adaccounts",
+  "name": "adaccounts",
+  "metaData": {
+    "name": "adaccounts",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "@mf2/adaccounts"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "adaccounts",
+    "pluginVersion": "0.8.12",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^0.1.0",
+      "shareScope": "default",
+      "name": "@mf2/shared-ui",
+      "version": "0.1.0",
+      "eager": false,
+      "id": "adaccounts:@mf2/shared-ui",
+      "assets": {
+        "js": {
+          "async": [
+            "166.6c90051d.js"
+          ],
+          "sync": [
+            "737.185b4ec9.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.0.0",
+      "shareScope": "default",
+      "name": "pinia",
+      "version": "3.0.4",
+      "eager": false,
+      "id": "adaccounts:pinia",
+      "assets": {
+        "js": {
+          "async": [
+            "166.6c90051d.js"
+          ],
+          "sync": [
+            "680.5746f48f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.5.0",
+      "shareScope": "default",
+      "name": "vue",
+      "version": "3.5.35",
+      "eager": false,
+      "id": "adaccounts:vue",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "166.6c90051d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "path": "./App",
+      "id": "adaccounts:App",
+      "name": "App",
+      "requires": [],
+      "file": "src/App.vue",
+      "assets": {
+        "js": {
+          "sync": [
+            "735.b7bf8422.js",
+            "__federation_expose_App.7db2e894.js"
+          ],
+          "async": [
+            "166.6c90051d.js",
+            "680.5746f48f.js",
+            "27.86460ad1.js",
+            "737.185b4ec9.js"
+          ]
+        },
+        "css": {
+          "sync": [
+            "735.e2116ed1.css"
+          ],
+          "async": [
+            "428.39f10746.css"
+          ]
+        }
+      }
+    },
+    {
+      "path": "./routes",
+      "id": "adaccounts:routes",
+      "name": "routes",
+      "requires": [],
+      "file": "src/router/index.ts",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_routes.71620a71.js"
+          ],
+          "async": [
+            "735.b7bf8422.js",
+            "__federation_expose_App.7db2e894.js",
+            "247.067a9886.js",
+            "166.6c90051d.js",
+            "680.5746f48f.js",
+            "27.86460ad1.js",
+            "737.185b4ec9.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "735.e2116ed1.css",
+            "428.39f10746.css"
+          ]
+        }
+      }
+    }
+  ]
+}

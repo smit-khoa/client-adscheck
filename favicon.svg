@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 24" fill="none">
+  <defs>
+    <linearGradient id="favG0" x1="-4.6" y1="24.3" x2="25.8" y2="1" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39E7E4" />
+      <stop offset="0.07" stop-color="#57E9C7" />
+      <stop offset="0.14" stop-color="#6CEBB2" />
+      <stop offset="0.2" stop-color="#79ECA6" />
+      <stop offset="0.26" stop-color="#7EEDA2" />
+      <stop offset="0.54" stop-color="#93F197" stop-opacity="0.2" />
+      <stop offset="0.57" stop-color="#94F196" stop-opacity="0.24" />
+      <stop offset="0.63" stop-color="#97F194" stop-opacity="0.36" />
+      <stop offset="0.71" stop-color="#9DF291" stop-opacity="0.55" />
+      <stop offset="0.81" stop-color="#A4F48D" stop-opacity="0.81" />
+      <stop offset="0.88" stop-color="#AAF58B" />
+      <stop offset="0.93" stop-color="#D4FD73" />
+    </linearGradient>
+    <linearGradient id="favG1" x1="9.33" y1="12" x2="31" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35E7E9" />
+      <stop offset="0.45" stop-color="#7EEDA2" />
+      <stop offset="0.93" stop-color="#D4FD73" />
+    </linearGradient>
+  </defs>
+  <path d="M6.56466 13.1373C6.56466 13.1373 13.9812 15.8051 18.6028 9.53764L15.4947 4.53853V0L21.6687 10.2817C21.6687 10.2817 12.9322 24 0 24L6.56466 13.1373Z" fill="url(#favG0)" stroke="#7EEDA2" stroke-width="0.4" />
+  <path d="M24.4353 13.1373C24.4353 13.1373 17.0189 15.8051 12.3972 9.53764L15.5053 4.53853V0L9.33133 10.2817C9.33133 10.2817 18.0678 24 31 24L24.4353 13.1373Z" fill="url(#favG1)" stroke="#7EEDA2" stroke-width="0.4" />
+</svg>
