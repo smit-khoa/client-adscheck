@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadaccounts=self.webpackChunkadaccounts||[]).push([["514"],{9401(e,t,n){var a=n(7758),c=n(4444);let o=n(5956).A,p=(0,a.defineComponent)({__name:"App",setup:e=>(e,t)=>((0,a.openBlock)(),(0,a.createBlock)(o))});var u=n(7937);let r=document.getElementById("root");if(r){let e=(0,a.createApp)({render:()=>(0,a.h)(u.j7,()=>(0,a.h)(p))});e.use((0,c.createPinia)()),e.mount(r)}}}]);
+//# sourceMappingURL=514.1e7ef3f1.js.map

@@ -16,8 +16,8 @@
     "types": {
       "path": "",
       "name": "",
-      "zip": "",
-      "api": ""
+      "zip": "@mf-types.zip",
+      "api": "@mf-types.d.ts"
     },
     "globalName": "ads_manager",
     "pluginVersion": "0.8.12",
@@ -36,16 +36,18 @@
       "assets": {
         "js": {
           "async": [
-            "166.8eb3d13c.js"
+            "166.8eb3d13c.js",
+            "919.63c99f36.js",
+            "74.a8071454.js"
           ],
           "sync": [
-            "983.0ef2aa54.js"
+            "749.5149384c.js"
           ]
         },
         "css": {
           "async": [],
           "sync": [
-            "983.16cacbd0.css"
+            "749.77c86b94.css"
           ]
         }
       },
@@ -65,7 +67,31 @@
             "166.8eb3d13c.js"
           ],
           "sync": [
-            "680.ceeded75.js"
+            "680.11ef639c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^2.0.9",
+      "shareScope": "default",
+      "name": "vue-sonner",
+      "version": "2.0.9",
+      "eager": false,
+      "id": "ads_manager:vue-sonner",
+      "assets": {
+        "js": {
+          "async": [
+            "166.8eb3d13c.js"
+          ],
+          "sync": [
+            "919.63c99f36.js"
           ]
         },
         "css": {
@@ -109,19 +135,23 @@
       "assets": {
         "js": {
           "sync": [
-            "302.92375afc.js",
+            "302.d3fd644c.js",
             "__federation_expose_App.d51d1bd3.js"
           ],
           "async": [
             "166.8eb3d13c.js",
-            "888.dd4be84e.js",
-            "983.0ef2aa54.js"
+            "794.6be83018.js",
+            "467.a623b190.js",
+            "442.957d85a7.js",
+            "749.5149384c.js",
+            "919.63c99f36.js",
+            "74.a8071454.js"
           ]
         },
         "css": {
           "sync": [],
           "async": [
-            "983.16cacbd0.css"
+            "749.77c86b94.css"
           ]
         }
       }
@@ -135,22 +165,20 @@
       "assets": {
         "js": {
           "sync": [
-            "__federation_expose_routes.14002157.js"
+            "__federation_expose_routes.582b2b7e.js"
           ],
           "async": [
-            "302.92375afc.js",
+            "794.6be83018.js",
+            "302.d3fd644c.js",
             "__federation_expose_App.d51d1bd3.js",
-            "220.57328a30.js",
-            "166.8eb3d13c.js",
-            "888.dd4be84e.js",
-            "983.0ef2aa54.js"
+            "968.3cb85673.js",
+            "166.8eb3d13c.js"
           ]
         },
         "css": {
           "sync": [],
           "async": [
-            "220.2c18897d.css",
-            "983.16cacbd0.css"
+            "968.c41ddc15.css"
           ]
         }
       }

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadaccounts=self.webpackChunkadaccounts||[]).push([["362"],{2116(e,a,t){t.r(a),t.d(a,{default:()=>c});let c=t(6589).A},3946(e,a,t){t.r(a),t.d(a,{default:()=>c});let c=t(5956).A},6589(e,a,t){t.d(a,{A:()=>c.A});var c=t(5039)},5039(e,a,t){t.d(a,{A:()=>l});var c=t(7758),d=t(3946);let l=(0,c.defineComponent)({__name:"App",setup:e=>(e,a)=>((0,c.openBlock)(),(0,c.createBlock)(d.default))})}}]);
+//# sourceMappingURL=__federation_expose_App.89c7e2da.js.map

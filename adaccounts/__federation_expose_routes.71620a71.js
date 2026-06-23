@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkadaccounts=self.webpackChunkadaccounts||[]).push([["91"],{486(e,a,t){t.r(a),t.d(a,{default:()=>c});let c=[{path:"",component:()=>Promise.all([t.e("603"),t.e("735"),t.e("247")]).then(t.bind(t,946))}]}}]);
-//# sourceMappingURL=__federation_expose_routes.71620a71.js.map

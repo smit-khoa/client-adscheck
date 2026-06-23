@@ -22,7 +22,7 @@
     "globalName": "shell_host",
     "pluginVersion": "0.8.12",
     "prefetchInterface": false,
-    "publicPath": "auto"
+    "publicPath": "/"
   },
   "shared": [
     {
@@ -36,51 +36,19 @@
       "assets": {
         "js": {
           "async": [
-            "939.146a8e80.chunk.js"
+            "40.d037210d.chunk.js"
           ],
           "sync": [
-            "main.4b72c872.js",
-            "runtime.21abc7e2.js",
-            "vendors.90da22d6.js"
+            "main.f3ede199.js",
+            "runtime.76ef4773.js",
+            "vendors.74269e2a.js"
           ]
         },
         "css": {
           "async": [
-            "939.0f197135.chunk.css"
+            "40.f4aa3ee0.chunk.css"
           ],
-          "sync": [
-            "main.d8bdd024.css"
-          ]
-        }
-      },
-      "usedIn": []
-    },
-    {
-      "singleton": true,
-      "requiredVersion": "^0.1.0",
-      "shareScope": "default",
-      "eager": true,
-      "name": "@mf2/shared-ui",
-      "version": "0.1.0",
-      "id": "shell_host:@mf2/shared-ui",
-      "assets": {
-        "js": {
-          "async": [
-            "939.146a8e80.chunk.js"
-          ],
-          "sync": [
-            "main.4b72c872.js",
-            "runtime.21abc7e2.js",
-            "vendors.90da22d6.js"
-          ]
-        },
-        "css": {
-          "async": [
-            "939.0f197135.chunk.css"
-          ],
-          "sync": [
-            "main.d8bdd024.css"
-          ]
+          "sync": []
         }
       },
       "usedIn": []
@@ -96,21 +64,19 @@
       "assets": {
         "js": {
           "async": [
-            "939.146a8e80.chunk.js"
+            "40.d037210d.chunk.js"
           ],
           "sync": [
-            "vendors.90da22d6.js",
-            "runtime.21abc7e2.js",
-            "main.4b72c872.js"
+            "vendors.74269e2a.js",
+            "runtime.76ef4773.js",
+            "main.f3ede199.js"
           ]
         },
         "css": {
           "async": [
-            "939.0f197135.chunk.css"
+            "40.f4aa3ee0.chunk.css"
           ],
-          "sync": [
-            "main.d8bdd024.css"
-          ]
+          "sync": []
         }
       },
       "usedIn": []
@@ -126,21 +92,19 @@
       "assets": {
         "js": {
           "async": [
-            "939.146a8e80.chunk.js"
+            "40.d037210d.chunk.js"
           ],
           "sync": [
-            "vendors.90da22d6.js",
-            "runtime.21abc7e2.js",
-            "main.4b72c872.js"
+            "vendors.74269e2a.js",
+            "runtime.76ef4773.js",
+            "main.f3ede199.js"
           ]
         },
         "css": {
           "async": [
-            "939.0f197135.chunk.css"
+            "40.f4aa3ee0.chunk.css"
           ],
-          "sync": [
-            "main.d8bdd024.css"
-          ]
+          "sync": []
         }
       },
       "usedIn": []
@@ -156,21 +120,19 @@
       "assets": {
         "js": {
           "async": [
-            "939.146a8e80.chunk.js"
+            "40.d037210d.chunk.js"
           ],
           "sync": [
-            "vendors.90da22d6.js",
-            "runtime.21abc7e2.js",
-            "main.4b72c872.js"
+            "vendors.74269e2a.js",
+            "runtime.76ef4773.js",
+            "main.f3ede199.js"
           ]
         },
         "css": {
           "async": [
-            "939.0f197135.chunk.css"
+            "40.f4aa3ee0.chunk.css"
           ],
-          "sync": [
-            "main.d8bdd024.css"
-          ]
+          "sync": []
         }
       },
       "usedIn": []
@@ -183,7 +145,7 @@
       "federationContainerName": "adaccounts",
       "moduleName": "routes",
       "usedIn": [
-        "src/main.ts + 23 modules"
+        "src/main.ts + 44 modules"
       ],
       "entry": "/adaccounts/mf-manifest.json"
     },
@@ -193,7 +155,7 @@
       "federationContainerName": "ads_manager",
       "moduleName": "routes",
       "usedIn": [
-        "src/main.ts + 23 modules"
+        "src/main.ts + 44 modules"
       ],
       "entry": "/ads-manager/mf-manifest.json"
     }
