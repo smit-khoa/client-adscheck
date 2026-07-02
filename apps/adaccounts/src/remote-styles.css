@@ -1,7 +1,0 @@
-/* CSS đi kèm federated chunk: theme + utilities, KHÔNG preflight
-   (host shell đã cấp preflight/base) — tránh nhân đôi reset khi mount trong shell. */
-@import "tailwindcss/theme";
-@import "tailwindcss/utilities";
-@import "tw-animate-css";
-@source "../../../packages";
-@source "./";

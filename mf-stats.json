@@ -1,0 +1,236 @@
+{
+  "id": "shell_host",
+  "name": "shell_host",
+  "metaData": {
+    "name": "shell_host",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "@mf2/shell"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "shell_host",
+    "pluginVersion": "0.8.12",
+    "prefetchInterface": false,
+    "publicPath": "/"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "^0.1.0",
+      "shareScope": "default",
+      "eager": true,
+      "name": "@mf2/shared-store",
+      "version": "0.1.0",
+      "id": "shell_host:@mf2/shared-store",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "main.77c4ce34.js",
+            "runtime.e95435c8.js",
+            "vendors.09f927b9.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^0.1.0",
+      "shareScope": "default",
+      "eager": true,
+      "name": "@mf2/shared-ui",
+      "version": "0.1.0",
+      "id": "shell_host:@mf2/shared-ui",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "main.77c4ce34.js",
+            "runtime.e95435c8.js",
+            "vendors.09f927b9.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.0.0",
+      "shareScope": "default",
+      "eager": true,
+      "name": "pinia",
+      "version": "3.0.4",
+      "id": "shell_host:pinia",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "vendors.09f927b9.js",
+            "runtime.e95435c8.js",
+            "main.77c4ce34.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^4.0.0",
+      "shareScope": "default",
+      "eager": true,
+      "name": "vue-router",
+      "version": "4.6.4",
+      "id": "shell_host:vue-router",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "vendors.09f927b9.js",
+            "runtime.e95435c8.js",
+            "main.77c4ce34.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^2.0.9",
+      "shareScope": "default",
+      "eager": true,
+      "name": "vue-sonner",
+      "version": "2.0.9",
+      "id": "shell_host:vue-sonner",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "vendors.09f927b9.js",
+            "runtime.e95435c8.js",
+            "main.77c4ce34.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^3.5.0",
+      "shareScope": "default",
+      "eager": true,
+      "name": "vue",
+      "version": "3.5.35",
+      "id": "shell_host:vue",
+      "assets": {
+        "js": {
+          "async": [
+            "721.f8cf4bf2.chunk.js",
+            "160.ac095362.chunk.js"
+          ],
+          "sync": [
+            "vendors.09f927b9.js",
+            "runtime.e95435c8.js",
+            "main.77c4ce34.js"
+          ]
+        },
+        "css": {
+          "async": [
+            "721.ca351056.chunk.css"
+          ],
+          "sync": [
+            "main.640bc68c.css"
+          ]
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "adaccounts",
+      "consumingFederationContainerName": "shell_host",
+      "federationContainerName": "adaccounts",
+      "moduleName": "routes",
+      "usedIn": [
+        "src/main.ts + 33 modules"
+      ],
+      "entry": "/adaccounts/mf-manifest.json"
+    },
+    {
+      "entry": "/ads-manager/mf-manifest.json",
+      "alias": "ads_manager",
+      "moduleName": "UNKNOWN",
+      "federationContainerName": "ads_manager",
+      "consumingFederationContainerName": "shell_host",
+      "usedIn": []
+    }
+  ],
+  "exposes": []
+}

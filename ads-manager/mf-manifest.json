@@ -1,0 +1,171 @@
+{
+  "id": "ads_manager",
+  "name": "ads_manager",
+  "metaData": {
+    "name": "ads_manager",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.1.0",
+      "buildName": "@mf2/ads-manager"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "@mf-types.zip",
+      "api": "@mf-types.d.ts"
+    },
+    "globalName": "ads_manager",
+    "pluginVersion": "0.8.12",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "ads_manager:@mf2/shared-ui",
+      "name": "@mf2/shared-ui",
+      "version": "0.1.0",
+      "singleton": true,
+      "requiredVersion": "^0.1.0",
+      "assets": {
+        "js": {
+          "async": [
+            "166.8eb3d13c.js",
+            "919.41b574ed.js",
+            "74.a8071454.js"
+          ],
+          "sync": [
+            "134.cdaafb2e.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": [
+            "134.8f64244f.css"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ads_manager:pinia",
+      "name": "pinia",
+      "version": "3.0.4",
+      "singleton": true,
+      "requiredVersion": "^3.0.0",
+      "assets": {
+        "js": {
+          "async": [
+            "166.8eb3d13c.js"
+          ],
+          "sync": [
+            "680.de3ce0b0.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ads_manager:vue-sonner",
+      "name": "vue-sonner",
+      "version": "2.0.9",
+      "singleton": true,
+      "requiredVersion": "^2.0.9",
+      "assets": {
+        "js": {
+          "async": [
+            "166.8eb3d13c.js"
+          ],
+          "sync": [
+            "919.41b574ed.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "ads_manager:vue",
+      "name": "vue",
+      "version": "3.5.35",
+      "singleton": true,
+      "requiredVersion": "^3.5.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "166.8eb3d13c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "ads_manager:App",
+      "name": "App",
+      "assets": {
+        "js": {
+          "sync": [
+            "302.ed85ba81.js",
+            "__federation_expose_App.d51d1bd3.js"
+          ],
+          "async": [
+            "166.8eb3d13c.js",
+            "794.6be83018.js",
+            "467.b5cedc71.js",
+            "442.4662cabe.js",
+            "134.cdaafb2e.js",
+            "919.41b574ed.js",
+            "74.a8071454.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "134.8f64244f.css"
+          ]
+        }
+      },
+      "path": "./App"
+    },
+    {
+      "id": "ads_manager:routes",
+      "name": "routes",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_routes.192f6a77.js"
+          ],
+          "async": [
+            "794.6be83018.js",
+            "302.ed85ba81.js",
+            "__federation_expose_App.d51d1bd3.js",
+            "968.f0b71fc8.js",
+            "166.8eb3d13c.js"
+          ]
+        },
+        "css": {
+          "sync": [],
+          "async": [
+            "968.152310a9.css"
+          ]
+        }
+      },
+      "path": "./routes"
+    }
+  ]
+}
