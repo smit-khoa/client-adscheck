@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkadaccounts=self.webpackChunkadaccounts||[]).push([["91"],{9486(e,a,t){t.r(a),t.d(a,{default:()=>c});let c=[{path:"",component:()=>Promise.all([t.e("237"),t.e("453"),t.e("603"),t.e("770"),t.e("864"),t.e("247")]).then(t.bind(t,3946))}]}}]);
-//# sourceMappingURL=__federation_expose_routes.8f8289fd.js.map

@@ -1,0 +1,11 @@
+# AI memory drift guards — fast (markdown/regex only), no typecheck here (CI owns that).
+node scripts/verify-catalog-coverage.mjs || exit 1
+node scripts/verify-feature-docs.mjs || exit 1
+node scripts/verify-pr-split.mjs --staged || exit 1
+
+# Soft reminder: feature code changed without touching its feature doc.
+# Warn only — never block (a CSS/typo fix must not be gated on doc edits).
+STAGED=$(git diff --cached --name-only)
+if echo "$STAGED" | grep -qE '^apps/[^/]+/src/' && ! echo "$STAGED" | grep -qE '^\.claude/features/'; then
+  echo "⚠️  Đụng apps/*/src nhưng không update .claude/features/ — nhớ cập nhật feature doc nếu đổi logic/route/API."
+fi

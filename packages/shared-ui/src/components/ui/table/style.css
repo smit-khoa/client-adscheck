@@ -1,0 +1,1426 @@
+/* Table Component Styles */
+
+.data-grid-container {
+    --table-text-color: #000;
+    --table-header-text-color: #5E6360;
+    --table-header-icon-color: #A5ACA7;
+    --table-header-icon-hover-bg: #D8E9E1;
+    --table-border-color: rgb(255 255 255 / 1);
+    --table-column-border-color: transparent;
+    --table-pane-surface: transparent;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--table-text-color);
+    background: transparent;
+    position: relative;
+}
+
+.data-grid-container.show-column-borders {
+    --table-column-border-color: var(--table-border-color);
+}
+
+/* Đảm bảo các cell có width cố định */
+.row-cell,
+.header-cell,
+.filter-cell {
+    flex-shrink: 0;
+}
+
+.header-option {
+    opacity: 0;
+    color: var(--table-header-icon-color);
+}
+
+.header-cell:hover {
+    .header-option {
+        opacity: 1;
+    }
+}
+
+/* Đảm bảo nội dung trong tất cả cell đều có ellipsis */
+.row-cell *,
+.header-cell *,
+.filter-cell * {
+    max-width: 100%;
+}
+
+/* Đặc biệt cho các text element */
+.row-cell p,
+.row-cell span,
+.row-cell div,
+.header-cell span,
+.header-cell div {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 70%;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.data-grid-toolbar-icon-button {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border: 0;
+    border-radius: 999px;
+    background: #fff;
+    color: #111827;
+    box-shadow: 0 10px 24px rgba(0, 177, 115, 0.08);
+    transition:
+        background-color 160ms ease,
+        box-shadow 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.data-grid-toolbar-icon-button:hover {
+    background: #fff;
+    color: #062;
+    box-shadow: 0 12px 28px rgba(0, 177, 115, 0.12);
+    transform: translateY(-1px);
+}
+
+.data-grid-toolbar-icon-button:focus-visible {
+    border: 0;
+    box-shadow:
+        0 10px 24px rgba(0, 177, 115, 0.10),
+        0 0 0 3px rgba(0, 177, 115, 0.22);
+}
+
+.data-grid-toolbar-icon-button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(0, 177, 115, 0.10);
+}
+
+.data-size-label,
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.data-size-select,
+.filter-input {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    background: transparent;
+}
+
+.data-size-select:focus,
+.filter-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 30%, transparent);
+}
+
+.loading-indicator {
+    color: var(--primary);
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* Buttons */
+
+.freeze-bulk-btn,
+.unfreeze-all-btn,
+.apply-color-btn,
+.clear-color-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.freeze-bulk-btn:hover,
+.unfreeze-all-btn:hover,
+.apply-color-btn:hover,
+.clear-color-btn:hover {
+    background: transparent;
+    border-color: var(--primary);
+}
+
+.freeze-bulk-btn:disabled,
+.unfreeze-all-btn:disabled,
+.apply-color-btn:disabled,
+.clear-color-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Frozen Controls */
+.frozen-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.frozen-count {
+    font-size: 12px;
+    color: var(--muted-foreground);
+    margin-left: 8px;
+}
+
+/* Color Highlighting Controls */
+.color-highlighting-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.highlight-label,
+.condition-label,
+.value-label,
+.color-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.highlight-select,
+.condition-select,
+.value-input,
+.color-select {
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+    background: transparent;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: color-mix(in oklab, var(--background) 90%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--muted);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-subtitle {
+    color: var(--muted-foreground);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Content */
+.data-grid-content {
+    position: relative;
+    display: flex;
+    /* height: 500px; */
+
+    flex: 1;
+    min-height: 0;
+}
+
+.data-grid-content.loading {
+    pointer-events: none;
+}
+
+/* Sidebar */
+.data-grid-sidebar {
+    width: 250px;
+    min-width: 250px;
+    border-right: 1px solid var(--border);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+}
+
+.sidebar-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.column-search {
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.sidebar-sections {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    border-bottom: 1px solid var(--border);
+}
+
+.section-header {
+    padding: 12px 16px;
+    background: transparent;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-icon {
+    font-size: 16px;
+}
+
+.drop-zone {
+    min-height: 60px;
+    padding: 12px 16px;
+    background: transparent;
+}
+
+.field-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 2px;
+    cursor: move;
+}
+
+.field-icon {
+    font-size: 14px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--destructive);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 4px;
+}
+
+.drop-hint {
+    color: var(--muted-foreground);
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.available-columns {
+    padding: 12px 16px;
+}
+
+.column-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+    cursor: move;
+}
+
+.column-icon {
+    font-size: 14px;
+    color: var(--muted-foreground);
+}
+
+/* Main Grid */
+.data-grid-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Thay đổi từ hidden thành auto để hỗ trợ scroll */
+    position: relative; /* Thêm position relative */
+}
+
+/* Header */
+.grid-header-container {
+    /* border-bottom: 1px solid var(--border); */
+
+    position: sticky; /* Thay đổi thành sticky để header luôn hiển thị */
+    top: 0; /* Đảm bảo header ở đầu */
+    z-index: 10;
+    background: transparent;
+    /* border: 1px solid var(--border); */
+    /* border-bottom: none; */
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    height: 50px;
+    min-height: 50px;
+}
+
+.grid-header {
+    overflow: hidden;
+    background: transparent;
+}
+.grid-header::-webkit-scrollbar {
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-row {
+    display: flex;
+    background: var(--table-pane-surface);
+    border-bottom: 0;
+    min-width: fit-content;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-cell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--table-header-text-color);
+    background: var(--table-pane-surface);
+    user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex-shrink: 0;
+}
+
+.header-cell:not(.empty-space-cell)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 16px;
+    background: var(--table-header-icon-color);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.header-cell > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+    margin-right: 8px; /* Khoảng cách với buttons */
+}
+
+.header-cell.frozen-column {
+    position: sticky;
+    /* background: var(--muted); */
+    z-index: 10;
+}
+
+.checkbox-cell {
+    width: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    justify-content: center;
+}
+
+.group-header,
+.group-cell {
+    /* width: 200px !important;
+  min-width: 200px !important; */
+}
+.filter-row {
+    display: flex;
+    background: transparent;
+}
+
+.filter-cell {
+    padding: 8px;
+    border-right: 1px solid var(--table-column-border-color);
+    background: transparent;
+}
+
+.filter-cell.frozen-column {
+    position: sticky;
+    background: transparent;
+    z-index: 10;
+}
+
+.filter-input-small {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Buttons in header */
+.freeze-btn,
+.sort-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.freeze-btn:hover,
+.sort-btn:hover {
+    background: transparent;
+}
+
+.freeze-icon {
+    font-size: 12px;
+}
+
+.sort-icon {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.sort-icon.sort-asc {
+    transform: rotate(180deg);
+}
+
+.sort-icon.sort-desc {
+    transform: rotate(0deg);
+}
+
+/* Column resizer
+   Hit-area is intentionally wider than the visible line: the element is an 8px
+   invisible grab zone so the edge is easy to hit, while the thin visible
+   indicator is drawn by ::before at the edge. The zone stays inside the header
+   cell (which clips overflow) and ends where the dropdown trigger begins, so it
+   neither gets clipped nor steals clicks from sibling controls. Fixed width
+   avoids the layout jump a hover width change would cause. */
+.column-resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: col-resize;
+    background: transparent;
+    /* Sit above sibling header controls so the edge is grabbable, but stay below
+       dropdown/overlay layers. */
+    z-index: 5;
+}
+
+/* Visible indicator: thin line at the column's right edge. */
+.column-resizer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    background: transparent;
+    transition: background-color 0.16s ease;
+}
+
+.column-resizer:hover::before,
+.column-resizer:active::before {
+    background: var(--primary);
+}
+
+/* Column header drag reorder */
+.column-drag-handle {
+    width: 20px;
+    height: 24px;
+    margin-right: 4px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--table-header-icon-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: grab;
+    opacity: 0.55;
+    transition: opacity 0.16s ease, color 0.16s ease, background-color 0.16s ease, transform 0.16s ease;
+}
+
+.header-cell:hover .column-drag-handle,
+.column-drag-handle:focus-visible {
+    opacity: 1;
+    color: var(--table-header-icon-color);
+}
+
+.column-drag-handle:hover {
+    background: var(--table-header-icon-hover-bg);
+}
+
+.column-drag-handle:active {
+    cursor: grabbing;
+    transform: scale(0.96);
+}
+
+.dragging-column {
+    cursor: grabbing !important;
+    user-select: none;
+}
+
+.column-drag-ghost {
+    position: fixed;
+    max-width: 240px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #BFD8CC;
+    border-radius: 999px;
+    background: #D8E9E1;
+    color: #5E6360;
+    box-shadow: 0 12px 28px rgba(94, 99, 96, 0.18);
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate3d(0, 0, 0) scale(1.02);
+}
+
+.column-drag-ghost span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.column-drag-ghost svg {
+    color: var(--table-header-icon-color);
+    flex-shrink: 0;
+}
+
+.column-drag-ghost--invalid {
+    border-color: #CBD5D0;
+    color: var(--table-header-icon-color);
+    background: #F3F7F5;
+    box-shadow: 0 10px 22px rgba(94, 99, 96, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .column-drag-handle,
+    .column-drag-ghost {
+        transition: none;
+    }
+}
+
+/* Body */
+.grid-body {
+    flex: 1;
+    overflow: visible; /* Thay đổi từ auto thành visible vì scroll đã chuyển lên data-grid-main */
+    position: relative;
+}
+
+.grid-content {
+    position: relative;
+}
+
+.grid-row {
+    display: flex;
+    /* border-top: 1px solid var(--border); */
+    background: transparent;
+    transition: background-color 0.2s;
+
+    &:first-child {
+        border-top: none;
+    }
+}
+
+.grid-row:hover {
+    /* background: var(--muted); */
+}
+
+.grid-row.selected {
+    background: var(--accent) !important;
+}
+
+.grid-row.group-row {
+    background: transparent;
+    font-weight: 600;
+}
+
+/* Row alternating colors */
+.grid-row.row-odd {
+    background: transparent;
+}
+
+.grid-row.row-even {
+    background: transparent;
+}
+
+/* Row hover background intentionally disabled (no colour change on hover). */
+
+.grid-row.row-odd.selected .row-cell {
+    background: var(--accent) !important;
+}
+
+.grid-row.row-even.selected .row-cell {
+    background: var(--accent) !important;
+}
+
+.row-cell {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-right: 1px solid var(--table-column-border-color);
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0; /* Quan trọng cho flexbox ellipsis */
+    border-top: 1px solid var(--table-border-color);
+    position: relative;
+}
+
+.row-cell:has(.cell-custom) {
+    overflow: visible;
+    padding: 0;
+}
+
+.cell-custom:hover .cell-custom-content {
+    height: 200%;
+    animation: slide-up 0.7s ease-in-out;
+    border: 1px solid var(--secondary);
+}
+
+.cell-custom-content {
+    width: 100%;
+    height: 100%;
+    transition: height 0.2s;
+    border: 1px solid var(--border);
+}
+
+@keyframes slide-up {
+    0% {
+        height: 100%;
+        border: 1px solid var(--border);
+    }
+    80% {
+        height: 100%;
+        border: 1px solid var(--border);
+    }
+    100% {
+        height: 200%;
+        border: 1px solid var(--secondary);
+    }
+}
+
+.grid-row:hover {
+    /* Lift a hovered row above sibling rows (for cell-custom slide-up overlay),
+       but keep it BELOW the sticky header (z-index 10) and footer-sum so those
+       stay on top while scrolling. */
+    z-index: 5;
+}
+
+/* Đảm bảo nội dung trong cell có ellipsis */
+.row-cell > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+
+/* Đặc biệt cho các cell có nội dung phức tạp */
+.row-cell .avatar-cell,
+.row-cell .actions-cell,
+.row-cell .progress-cell,
+.row-cell .rating-cell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    width: 100%;
+}
+
+/* Đảm bảo text trong các cell phức tạp cũng có ellipsis */
+.row-cell .avatar-name,
+.row-cell .progress-text,
+.row-cell .rating-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+/* CSS cho các cell đặc biệt trong demo */
+.avatar-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.avatar-image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.avatar-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: transparent;
+    border-color: var(--primary);
+}
+
+.progress-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s;
+}
+
+.progress-text {
+    font-size: 11px;
+    color: var(--muted-foreground);
+    flex-shrink: 0;
+    min-width: 30px;
+    text-align: right;
+}
+
+.rating-cell {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.rating-value {
+    font-size: 11px;
+    color: var(--muted-foreground);
+    flex-shrink: 0;
+}
+
+.row-cell.frozen-column {
+    position: sticky;
+    background: var(--table-pane-surface);
+    z-index: 10;
+}
+
+.checkbox-cell {
+    justify-content: center;
+}
+
+.group-cell {
+    background: transparent;
+}
+
+.group-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.expand-icon {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.expand-icon.expanded {
+    transform: rotate(90deg);
+}
+
+.group-label {
+    font-weight: 600;
+}
+
+/* Color highlighting */
+.highlight-red {
+    background-color: #ffebee !important;
+}
+.highlight-green {
+    background-color: #e8f5e8 !important;
+}
+.highlight-blue {
+    background-color: #e3f2fd !important;
+}
+.highlight-yellow {
+    background-color: #fff8e1 !important;
+}
+.highlight-purple {
+    background-color: #f3e5f5 !important;
+}
+.highlight-orange {
+    background-color: #fff3e0 !important;
+}
+.highlight-pink {
+    background-color: #fce4ec !important;
+}
+.highlight-cyan {
+    background-color: #e0f2f1 !important;
+}
+
+/* Footer */
+.grid-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background: transparent;
+    border-top: 1px solid var(--table-border-color);
+    font-size: 12px;
+    color: var(--muted-foreground);
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    gap: 16px;
+}
+
+/* Context Menu */
+.context-menu {
+    position: fixed;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 160px;
+}
+
+.context-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.context-menu-item:hover {
+    background: transparent;
+}
+
+.menu-icon {
+    font-size: 14px;
+}
+
+.context-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+/* Scrollbar styling */
+.data-grid-main::-webkit-scrollbar,
+.grid-header::-webkit-scrollbar,
+.grid-body::-webkit-scrollbar,
+.table-pane-scroll-body::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.data-grid-main::-webkit-scrollbar-track,
+.grid-header::-webkit-scrollbar-track,
+.grid-body::-webkit-scrollbar-track,
+.table-pane-scroll-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.data-grid-main::-webkit-scrollbar-thumb,
+.grid-header::-webkit-scrollbar-thumb,
+.grid-body::-webkit-scrollbar-thumb,
+.table-pane-scroll-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.10);
+    border-radius: 999px;
+}
+
+.data-grid-main::-webkit-scrollbar-thumb:hover,
+.grid-header::-webkit-scrollbar-thumb:hover,
+.grid-body::-webkit-scrollbar-thumb:hover,
+.table-pane-scroll-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.border-top-none {
+    border-top: none !important;
+}
+
+/* mới */
+
+/* Group row improvements */
+.group-cell-full {
+    border-right: none !important;
+    cursor: pointer;
+    padding: 0 !important;
+}
+
+.group-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 0;
+    font-weight: 600;
+    color: var(--foreground);
+    height: 100%;
+}
+
+.group-content:hover {
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    /* border-radius: 4px; */
+}
+
+.group-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--foreground);
+}
+
+/* Data row with indent */
+.data-row-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2px 0;
+}
+
+/* Group row styling */
+.grid-row.group-row {
+    /* background: var(--muted) !important; */
+    /* border-left: 3px solid var(--primary); */
+    font-weight: 600;
+    cursor: pointer;
+    /* Thêm border-top để tạo hiệu ứng phân cách rõ ràng hơn */
+    /* border-top: 2px solid var(--border); */
+}
+
+/* Style khác cho group con level 1 */
+.grid-row.group-row[data-level="1"] {
+    /* background: var(--muted) !important; */
+    /* border-top: 1px solid var(--border); */
+}
+
+/* Style khác cho group con level 2 trở lên */
+.grid-row.group-row[data-level="2"],
+.grid-row.group-row[data-level="3"] {
+    /* background: var(--border) !important; */
+    /* border-top: 1px solid var(--border); */
+}
+
+.grid-row.group-row:hover {
+    /* background: var(--muted) !important; */
+}
+
+/* Remove borders from group row cells */
+.grid-row.group-row .row-cell {
+    border-right: none !important;
+}
+
+/* Child data rows styling */
+.grid-row[data-level] {
+    position: relative;
+}
+
+/* Improve group expand/collapse icon */
+.group-content svg {
+    color: var(--muted-foreground);
+    transition: all 0.2s ease;
+}
+
+.group-content:hover svg {
+    color: var(--primary);
+}
+
+/* Style for empty group state */
+.group-content.empty {
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* Enhance checkbox alignment in grouped rows */
+.row-cell.checkbox-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-r-group::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 10000px;
+    height: 1px;
+    top: -1px;
+    background-color: var(--table-border-color);
+}
+
+.border-r-group::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    width: 10000px;
+    height: 1px;
+    bottom: -1px;
+    background-color: var(--table-border-color);
+}
+
+.border-right-end-group::after {
+    content: "";
+    position: absolute;
+    right: 19px;
+    width: 10000px;
+    height: 1px;
+    bottom: -1px;
+    background-color: var(--table-border-color);
+}
+
+/* ── Range selection highlight (Excel-like copy) ─────────────────
+   Painted onto the real cell background, not a floating overlay. Uses a SOLID
+   blended colour (color-mix with --background, no alpha) so overlapping frozen +
+   scrollable cells never stack their transparency, and frozen cells stay pinned
+   on scroll (native sticky DOM). !important overrides the inline `background`
+   that getCellBackground sets on stripe/frozen cells. */
+.row-cell.range-cell {
+    background: #D8E9E1 !important;
+}
+
+/* Flat highlight: the active/anchor cell shares the same tint as the rest. */
+.row-cell.range-cell.range-cell--primary {
+    background: #D8E9E1 !important;
+}
+
+/* Copy-confirmation wave. A subtle inset glow that ripples left-to-right across
+   the just-copied range (per-column stagger via --copy-wave-delay set inline).
+   Animates box-shadow + a brightening overlay, NOT background — the range tint
+   uses !important and would win over an animated background. inset shadow paints
+   above the cell fill but below the text, so values stay readable. */
+.row-cell.range-cell--copied {
+    animation: range-copy-wave 600ms ease-out both;
+    animation-delay: var(--copy-wave-delay, 0ms);
+}
+
+@keyframes range-copy-wave {
+    0% {
+        box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0);
+    }
+    35% {
+        box-shadow: inset 0 0 0 9999px rgba(46, 160, 109, 0.28);
+    }
+    100% {
+        box-shadow: inset 0 0 0 9999px rgba(255, 255, 255, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .row-cell.range-cell--copied {
+        animation: none;
+    }
+}
+
+/* Header cells of selected columns use the same tint as the body and keep
+   the header text color consistent with the rest of the header row. */
+.header-cell.range-col {
+    background: #D8E9E1 !important;
+    color: #5E6360;
+}
+
+.header-cell.range-col.range-col--primary {
+    background: #D8E9E1 !important;
+    color: #5E6360;
+}
+
+/* Floating copy/settings buttons anchored at the active range corner. */
+.range-actions {
+    position: absolute;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    pointer-events: auto;
+    z-index: 12;
+    user-select: none;
+}
+
+.range-actions__btn {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #374151;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.range-actions__btn:hover {
+    background: #f3f4f6;
+}
+
+/* Header cells double as column-select handles when range-select is on. */
+.header-cell.range-col-handle {
+    cursor: cell;
+}
+
+
+/* Full pane split layout: frozen content and scrollable content no longer overlap. */
+.table-pane-root {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.table-pane-header,
+.table-pane-body,
+.table-pane-footer {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+}
+
+.table-pane-header {
+    height: 50px;
+    min-height: 50px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--table-pane-surface);
+    border-radius: 8px 8px 0 0;
+}
+
+.table-pane-frozen-header,
+.table-pane-scroll-header,
+.table-pane-frozen-footer,
+.table-pane-scroll-footer {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.table-pane-scroll-header,
+.table-pane-scroll-footer {
+    flex: 1;
+    min-width: 0;
+}
+
+.table-pane-frozen-header,
+.table-pane-frozen-footer {
+    display: flex;
+    background: var(--table-pane-surface);
+}
+
+.table-pane-scroll-header-content,
+.table-pane-scroll-footer-content {
+    position: relative;
+    height: 100%;
+    will-change: transform;
+}
+
+.table-pane-body {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.table-pane-frozen-body {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--table-pane-surface);
+}
+
+.table-pane-root.is-scrolling-x .table-pane-frozen-header,
+.table-pane-root.is-scrolling-x .table-pane-frozen-body,
+.table-pane-root.is-scrolling-x .table-pane-frozen-footer {
+    box-shadow: 6px 0 10px -8px color-mix(in oklab, var(--foreground) 55%, transparent);
+    border-right: 1px solid color-mix(in oklab, var(--foreground) 18%, transparent);
+    z-index: 2;
+}
+
+.table-pane-scroll-body {
+    flex: 1;
+    min-width: 0;
+    overflow: auto;
+    position: relative;
+}
+
+.table-pane-scroll-body::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+.table-fake-scrollbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    z-index: 15;
+    cursor: default;
+    background: transparent;
+    pointer-events: auto;
+    user-select: none;
+}
+
+.table-fake-scrollbar__thumb {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.10);
+    cursor: grab;
+    transition: background 0.15s;
+}
+
+.table-fake-scrollbar__thumb:hover,
+.table-fake-scrollbar--dragging .table-fake-scrollbar__thumb {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.table-fake-scrollbar--dragging .table-fake-scrollbar__thumb {
+    cursor: grabbing;
+}
+
+.table-pane-footer {
+    min-height: 60px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--table-border-color);
+}
+
+.table-pane-frozen-footer,
+.table-pane-scroll-footer {
+    min-height: 60px;
+    background: var(--table-pane-surface);
+}
+
+.table-pane-root .header-cell,
+.table-pane-root .footer-cell,
+.table-pane-root .table-pane-frozen-body .row-cell {
+    background: var(--table-pane-surface);
+}
+
+.table-pane-root .row-cell.frozen-column,
+.table-pane-root .header-cell.frozen-column,
+.table-pane-root .footer-cell.frozen-column {
+    position: relative;
+    left: auto;
+    z-index: auto;
+}
+
+.table-pane-root .non-frozen-cell {
+    position: absolute !important;
+    height: 100% !important;
+}
+
+.table-pane-root .grid-content {
+    position: relative;
+}

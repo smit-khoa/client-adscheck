@@ -1,0 +1,8 @@
+{
+  "shell": { "port": 8301 },
+  "remotes": {
+    "adaccounts": { "host": "localhost", "port": 3010 },
+    "ads_manager": { "host": "localhost", "port": 3011 },
+    "extended_payment": { "host": "localhost", "port": 3012 }
+  }
+}

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkads_manager=self.webpackChunkads_manager||[]).push([["362"],{2116(a,e,s){s.r(e),s.d(e,{default:()=>u});let u=s(8165).A}}]);
-//# sourceMappingURL=__federation_expose_App.d51d1bd3.js.map
