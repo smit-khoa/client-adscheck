@@ -36,18 +36,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "main.77c4ce34.js",
-            "runtime.e95435c8.js",
-            "vendors.09f927b9.js"
+            "main.cc3b26b9.js",
+            "runtime.72898f80.js",
+            "vendors.ea4eb84c.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -67,18 +67,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "main.77c4ce34.js",
-            "runtime.e95435c8.js",
-            "vendors.09f927b9.js"
+            "main.cc3b26b9.js",
+            "runtime.72898f80.js",
+            "vendors.ea4eb84c.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -98,18 +98,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "vendors.09f927b9.js",
-            "runtime.e95435c8.js",
-            "main.77c4ce34.js"
+            "vendors.ea4eb84c.js",
+            "runtime.72898f80.js",
+            "main.cc3b26b9.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -129,18 +129,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "vendors.09f927b9.js",
-            "runtime.e95435c8.js",
-            "main.77c4ce34.js"
+            "vendors.ea4eb84c.js",
+            "runtime.72898f80.js",
+            "main.cc3b26b9.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -160,18 +160,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "vendors.09f927b9.js",
-            "runtime.e95435c8.js",
-            "main.77c4ce34.js"
+            "vendors.ea4eb84c.js",
+            "runtime.72898f80.js",
+            "main.cc3b26b9.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -191,18 +191,18 @@
       "assets": {
         "js": {
           "async": [
-            "721.f8cf4bf2.chunk.js",
+            "680.83ca0cd1.chunk.js",
             "160.ac095362.chunk.js"
           ],
           "sync": [
-            "vendors.09f927b9.js",
-            "runtime.e95435c8.js",
-            "main.77c4ce34.js"
+            "vendors.ea4eb84c.js",
+            "runtime.72898f80.js",
+            "main.cc3b26b9.js"
           ]
         },
         "css": {
           "async": [
-            "721.ca351056.chunk.css"
+            "680.e25ab855.chunk.css"
           ],
           "sync": [
             "main.640bc68c.css"
@@ -219,7 +219,7 @@
       "federationContainerName": "adaccounts",
       "moduleName": "routes",
       "usedIn": [
-        "src/main.ts + 33 modules"
+        "src/main.ts + 31 modules"
       ],
       "entry": "/adaccounts/mf-manifest.json"
     },
